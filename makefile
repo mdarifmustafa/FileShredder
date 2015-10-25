@@ -5,8 +5,8 @@ JC = javac
 	$(JC) $(JFLAGS) $*.java
 	
 CLASSES = \
-  ToRemove.java \
-	Main.java \
+  fileshredder/ToRemove.java \
+	fileshredder/Main.java \
 
 default: classes
 
