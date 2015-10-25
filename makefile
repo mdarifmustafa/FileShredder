@@ -17,3 +17,4 @@ classes: $(CLASSES:.java=.class)
 
 clean:
 	$(RM) fileshredder/*.class
+	$(RM) *.jar
