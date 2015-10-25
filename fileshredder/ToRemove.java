@@ -4,12 +4,14 @@ import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.security.SecureRandom;
+
 public class ToRemove {
+	// Useless constructor method
 	public ToRemove(){}
   public static void secureDelete(String path) throws IOException {
 		File file = new File(path);
 		if (file.exists()){
-			for(int i = 0;i<10; i++){
+			for(int i = 0; i<10; i++){
 			long length = file.length();
 			SecureRandom random = new SecureRandom();
 			RandomAccessFile raf = new RandomAccessFile(file, "rws");
