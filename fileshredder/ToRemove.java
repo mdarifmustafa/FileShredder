@@ -1,4 +1,4 @@
-package saferemoval;
+package fileshredder;
 
 import java.io.File;
 import java.io.IOException;
