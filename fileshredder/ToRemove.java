@@ -8,7 +8,8 @@ public class ToRemove {
 	public ToRemove(){}
   public static void secureDelete(String path) throws IOException {
 		File file = new File(path);
-  	if (file.exists()) {
+		if (file.exists()){
+			for(int i = 0;i<10; i++){
 			long length = file.length();
 			SecureRandom random = new SecureRandom();
 			RandomAccessFile raf = new RandomAccessFile(file, "rws");
@@ -25,4 +26,5 @@ public class ToRemove {
 		file.delete();
 		}
 	}
+}
 }
