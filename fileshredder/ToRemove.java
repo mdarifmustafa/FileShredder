@@ -7,7 +7,7 @@ import java.security.SecureRandom;
 
 public class ToRemove {
 	// Useless constructor method
-	public ToRemove(){}
+	//public ToRemove(){}
   public static void secureDelete(String path) throws IOException {
 		File file = new File(path);
 		if (file.exists()){
