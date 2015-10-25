@@ -8,7 +8,10 @@ CLASSES = \
   fileshredder/ToRemove.java \
 	fileshredder/Main.java \
 
-default: classes
+default: jar
+
+jar: classes
+	jar cfe FileShredder.jar fileshredder.Main fileshredder/*.class
 
 classes: $(CLASSES:.java=.class)
 
