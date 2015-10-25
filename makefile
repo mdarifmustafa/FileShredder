@@ -11,10 +11,9 @@ CLASSES = \
 default: jar
 
 jar: classes
-	jar cfe fileshredder/FileShredder.jar fileshredder.Main fileshredder/*.class
+	jar cfe FileShredder.jar fileshredder.Main fileshredder/*.class
 
 classes: $(CLASSES:.java=.class)
 
 clean:
 	$(RM) fileshredder/*.class
-	$(RM) fileshredder/*.jar
