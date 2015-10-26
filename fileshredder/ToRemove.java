@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.security.SecureRandom;
+// Import javax.swing.JOptionPane;
 
 public class ToRemove {
 	// Useless constructor method
@@ -11,7 +12,10 @@ public class ToRemove {
   public static void secureDelete(String path) throws IOException {
 		File file = new File(path);
 		if (file.exists()){
-			for(int i = 0; i<10; i++){
+			// Overwriting the file multiple times
+			// Do i have to ask the user how many times?
+			// int i = JOptionPane.showInputDialog("?");
+			for(int i = 0; i<32; i++){
 			long length = file.length();
 			SecureRandom random = new SecureRandom();
 			RandomAccessFile raf = new RandomAccessFile(file, "rws");
