@@ -1,4 +1,5 @@
 # FileShredder
 Delete all your dirty files...
 # Usage
-Just compile the project with 'make' and then run the executable with 'java -jar FileShredder.jar'
+* Compile the project with 'make'
+* Run it with 'java -jar FileShredder.jar'
