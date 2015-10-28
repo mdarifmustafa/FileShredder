@@ -13,16 +13,14 @@ public class Main {
 			String tmp = chooser.getSelectedFile().getPath();
 	  	// Check if the string is null to avoid NullPointerException
 	  	if(tmp != null){
-	  		ToRemove t = new ToRemove();
-	  		t.secureDelete(tmp);
+	  		ToRemove.secureDelete(tmp);
 			}
 			else{
 				System.exit(1);
 			}
 		}
 		else {
-			ToRemove t = new ToRemove();
-			t.secureDelete(args[0]);
+			ToRemove.secureDelete(args[0]);
 		}
 	}
 }
