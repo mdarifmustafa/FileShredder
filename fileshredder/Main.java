@@ -7,18 +7,22 @@ import java.util.*;
 
 public class Main {
 	public static void main(String []args) throws IOException {
-		// Scanner for cli version
-		//Scanner input = new Scanner(System.in);
-  	JFileChooser chooser = new JFileChooser();
-  	chooser.showOpenDialog(null);
-  	String tmp = chooser.getSelectedFile().getPath();
-  	// Check if the string is null to avoid NullPointerException
-  	if(tmp != null){
-  		ToRemove t = new ToRemove();
-  		t.secureDelete(tmp);
+		if(args[0] == null){
+	  	JFileChooser chooser = new JFileChooser();
+	  	chooser.showOpenDialog(null);
+			String tmp = chooser.getSelectedFile().getPath();
+	  	// Check if the string is null to avoid NullPointerException
+	  	if(tmp != null){
+	  		ToRemove t = new ToRemove();
+	  		t.secureDelete(tmp);
+			}
+			else{
+				System.exit(1);
+			}
 		}
-		else{
-			System.exit(1);
+		else {
+			ToRemove t = new ToRemove();
+			t.secureDelete(args[0]);
 		}
 	}
 }
