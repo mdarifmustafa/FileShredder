@@ -7,7 +7,7 @@ import java.util.*;
 
 public class Main {
 	public static void main(String []args) throws IOException {
-		if(args[0] == null){
+		if(args.length == 0){
 	  	JFileChooser chooser = new JFileChooser();
 	  	chooser.showOpenDialog(null);
 			String tmp = chooser.getSelectedFile().getPath();
