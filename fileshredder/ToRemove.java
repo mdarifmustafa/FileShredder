@@ -10,7 +10,9 @@ public class ToRemove {
 	// Useless constructor method
 	//public ToRemove(){}
   public static void secureDelete(String path) throws IOException {
-		File file = new File(path);
+		secureDelete(new File(path));
+  }
+  public static void secureDelete(File file) throws IOException {
 		if (file.exists()){
 			// Overwriting the file multiple times
 			// Do i have to ask the user how many times?
