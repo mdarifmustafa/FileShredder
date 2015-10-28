@@ -20,7 +20,9 @@ public class Main {
 			}
 		}
 		else {
-			ToRemove.secureDelete(args[0]);
+			for(String file:args){
+				ToRemove.secureDelete(file);
+			}
 		}
 	}
 }
